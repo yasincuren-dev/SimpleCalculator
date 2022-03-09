@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="240dp"
+        android:text="Result : 0"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <EditText
+        android:id="@+id/number1Text"
+        android:layout_width="233dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginBottom="61dp"
+        android:ems="10"
+        android:hint="Enter number"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/number2Text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/number2Text"
+        android:layout_width="233dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        android:ems="10"
+        android:hint="Enter number2"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number1Text" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="340dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="113dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/resultText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number2Text">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="65dp"
+            android:layout_height="58dp"
+            android:background="#605757"
+            android:backgroundTint="#736868"
+            android:onClick="sum"
+            android:text="+"
+            android:textColor="#050505"
+            android:textColorHighlight="#7E7A7A"
+            android:textColorLink="#706969" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="65dp"
+            android:layout_height="58dp"
+            android:background="#605757"
+            android:backgroundTint="#736868"
+            android:onClick="deduct"
+            android:text="-"
+            android:textColor="#050505"
+            android:textColorHighlight="#7E7A7A"
+            android:textColorLink="#706969" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="65dp"
+            android:layout_height="58dp"
+            android:background="#000000"
+            android:backgroundTint="#736868"
+            android:onClick="multiply"
+            android:text="*"
+            android:textColor="#050505"
+            android:textColorHighlight="#000000"
+            android:textColorLink="#706969" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="65dp"
+            android:layout_height="58dp"
+            android:background="#000000"
+            android:backgroundTint="#0B0303"
+            android:hapticFeedbackEnabled="false"
+            android:onClick="divide"
+            android:text="/"
+            android:textColor="#050505"
+            android:textColorHighlight="#000000"
+            android:textColorLink="#000000"
+            app:iconTint="#000000"
+            app:rippleColor="#000000" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
